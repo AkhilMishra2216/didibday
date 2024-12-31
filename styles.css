@@ -1,0 +1,189 @@
+/* Basic Reset */
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(to bottom, #ffccff, #ccffff);
+    text-align: center;
+    overflow-x: hidden;
+  }
+  
+  /* Header Section */
+  .header {
+    padding: 20px;
+    background-color: #ff99cc;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .header p {
+    font-size: 1.2rem;
+  }
+  
+  /* Balloons Section */
+  .balloons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 200px;
+    margin: 20px;
+    position: relative;
+  }
+  
+  .balloon {
+    width: 50px;
+    height: 70px;
+    border-radius: 50% 50% 50% 50%;
+    margin: 0 10px;
+    position: relative;
+    animation: float 3s infinite ease-in-out;
+  }
+  
+  .balloon::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 2px;
+    height: 30px;
+    background-color: #333;
+  }
+  
+  .red {
+    background-color: red;
+  }
+  
+  .blue {
+    background-color: blue;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Message Section */
+  .message {
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border: 2px dashed #ff99cc;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Game Section */
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff99cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    background-color: #ff6699;
+  }
+  
+  /* Footer Section */
+  footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: #cc99ff;
+    color: white;
+  }
+  
+
+.img{
+  height:50vh;
+  width:50vw;
+  transition: transform;
+}
+
+.fotu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img:hover{
+  transform: scale(1.1);
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1.1rem;
+  }
+
+  .balloon {
+    width: 15vw;
+    height: 20vh;
+    margin: 0 8vw;
+  }
+
+  .message {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .img {
+    width: 70vw;
+    height: 45vh;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+}
+
+/* For large screens (1024px and above) */
+@media screen and (min-width: 1025px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header p {
+    font-size: 1.2rem;
+  }
+
+  .balloon {
+    width: 10vw;
+    height: 15vh;
+    margin: 0 10vw;
+  }
+
+  .message {
+    margin: 2rem;
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .img {
+    width: 50vw;
+    height: 50vh;
+  }
+
+  footer {
+    font-size: 1.1rem;
+  }
+}
